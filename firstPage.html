@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="project.css">
+    <link href="page1.html">
+    
+</head>
+<body>
+    <header>
+        <h1>Rent-N-Ride Company <sub style="font-size: small;">since 1989</sub></h1>
+    </header>
+      
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img class="slide-img" src="car1.jpg" alt="Image 1" height="150px">
+        </div>
+        
+        <div class="mySlides">
+            <img class="slide-img" src="car2.jpg" alt="Image 2" height="150px">
+        </div>
+       
+        <div class="mySlides">
+            <img class="slide-img" src="car3.jpg" alt="Image 3" height="150px">
+        </div>
+        
+        <div class="mySlides">
+            <img class="slide-img" src="car5.jpg" alt="Image 4" height="150px">
+        </div>
+    </div>
+    
+    <div class="form-container">
+        <h3 style="color: rgb(122, 36, 4);">Select a car :</h3> 
+        <ul>
+            <li><a href="page1.html">BMW <span class="tooltip"> Experience luxury and performance with our BMW rental cars. 
+                 
+                Enjoy cutting-edge technology, premium comfort, and iconic style on every journey.</span> </a></li>
+            <li><a href="page2.html">Mercedes <span class="tooltip">Experience unparalleled luxury and sophistication with our Mercedes rental cars. 
+                Elevate your driving experience with Rent-N-Ride's Mercedes rentals today.
+            </span> </a></li>
+            <li><a href="page3.html">Lamborghini <span class="tooltip">Feel the raw power and unmatched performance of these iconic supercars. 
+                Elevate your driving experience with Rent-N-Ride's Lamborghini rentals today.</span></a></li>
+            <li><a href="page4.html">Camaro <span class="tooltip"> Embrace the spirit of American muscle and precision engineering.
+                 Discover the thrill of the open road with Rent-N-Ride's Camaro rentals today.</span></a></li>
+            <li><a href="page5.html">Cruiser <span class="tooltip">Embark on unforgettable adventures with our Cruiser rental cars.
+                feel the freedom of the open road with Rent-N-Ride's Cruiser rentals.
+            </span></a></li>
+        </ul>
+    </div>
+    
+    <footer>
+        <br>
+        <p><a href="#">Home</a> | <a href="#">About Us</a> | <a href="#">Services</a> | <a href="#">Contact Us</a> </p> 
+        <p>Copyright &copy; Rent-N-Ride Co. </p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        let slides = document.getElementsByClassName("mySlides");
+        showSlides();
+
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2000); 
+        }
+    </script>
+</body>
+</html>
+

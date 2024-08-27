@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="javas.js"></script>
+  <title>BMW2015</title>
+ 
+</head>
+<header>
+  <p id="h">BMW2015</p>
+</header>
+<body>
+  <div id="twodiv">
+    <div class="container1">
+      <div class="card" style="--clr:#009688">
+        <div class="imgbx">
+          <img src="card1.jpg">
+        </div>
+        <div class="content">
+          <h2>CAR MODELS</h2>
+          <p>The 2015 BMW lineup featured a range of vehicles, including the popular 3 Series, 5 Series, and X5.
+            The 3 Series offered a blend of luxury and performance, with options for both sedan and wagon models.
+            The 5 Series continued to be a benchmark for executive sedans, offering a balance of comfort, technology, and driving dynamics.</p>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="container">
+        <input type="radio" name="slide" id="c1">
+        <label for="c1" class="card">
+          <div class="row">
+            <div class="icon">1</div>
+          </div>
+        </label>
+        <input type="radio" name="slide" id="c2">
+        <label for="c2" class="card">
+          <div class="row">
+            <div class="icon">2</div>
+          </div>
+        </label>
+        <input type="radio" name="slide" id="c3">
+        <label for="c3" class="card">
+          <div class="row">
+            <div class="icon">3</div>
+          </div>
+        </label>
+        <input type="radio" name="slide" id="c4">
+        <label for="c4" class="card">
+          <div class="row">
+            <div class="icon">4</div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="container2">
+    <p class="p" style="color: aliceblue;">Renting Price: <span id="price"> 50$/day</span> </p> <br>
+
+    <p class="p" style="color: white;">Select The Number of days you will Rent this car:</p> <br>
+
+    <input type="number" id="days" > <br>
+
+    <p class="p" style="color: white;">Select The day you will pick this car:</p> <br>
+
+    <input type="date" id="bookingDateTime" name="bookingDateTime" min="" required> <br>
+    <button onclick="cost(50)" style="height: 30px; font-style: italic;">Get Price</button> <br>
+    <h4 id="in" style="color: aliceblue;"></h4> <br>
+    <h4 id="in1" style="color: aliceblue;"></h4>
+    <a class="btn" href="#">
+      <span class="btnInner">Book Now</span>
+    </a>
+  </div>
+</body>
+<footer>
+  <div id="links">
+    <a href="https://www.whatsapp.com">
+      <img src="whatsapp.png" alt="Example Image" height="40px" width="40px">
+    </a>
+    <a href="https://www.facebook.com">
+      <img src="facebook.png" alt="Example Image" height="40px" width="40px">
+    </a>
+    <a href="https://www.instagram.com">
+      <img src="instagram.png" alt="Example Image" height="40px" width="40px">
+    </a>
+  </div>
+</footer>
+<script>
+ 
+  var today = new Date();
+
+  
+  var yyyy = today.getFullYear();
+  var mm = String(today.getMonth() + 1).padStart(2, '0');
+  var dd = String(today.getDate()).padStart(2, '0');
+  var minDate = yyyy + '-' + mm + '-' + dd;
+
+ 
+  document.getElementById("bookingDateTime").min = minDate;
+</script>
+</html>
